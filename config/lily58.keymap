@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
@@ -19,14 +20,14 @@
 // |  CTRL |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSPC  |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |  FREE |  Z  |  X  |  C   |  V   |  B   |   ESC  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | MO 1 |  SPACE |  | ENTER | MO 2 | BSPC  | GUI   |
+//                     | ALT  | GUI  | MO 1 |  SPACE |  | ENTER | MO 2 | MO 3  | GUI   |
             display-name = "Base";
             bindings = <
 &kp TAB   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp LCTRL &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSPC
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &trans    &kp Z  &kp X  &kp C    &kp V    &kp B  &kp ESC    &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                        &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp RGUI
+                        &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &mo 3 &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -51,7 +52,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-            raise_layer {
+        raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -65,6 +66,25 @@
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        mouse_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |MLEFT | MDOWN |  MUP  |MRIGHT|       |       |
+// |       |     |     |      |      |      |        |  |       |      |MLCLICK|MRCLICK|      |       |       |
+//                     |      |      |      |        |  |       |      |       |       |
+            display-name = "Mo 3";
+            bindings = <
+&trans    &trans &trans &trans   &trans   &trans                     &trans &trans   &trans    &trans  &trans   &trans
+&trans    &trans &trans &trans   &trans   &trans                     &trans &trans   &trans    &trans  &trans   &trans
+&trans    &trans &trans &trans   &trans   &trans                     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &trans   &trans
+&trans    &trans &trans &trans   &trans   &trans &trans     &trans   &msc SCRL_DOWN &mkp LCLK &mkp RCLK &msc SCRL_UP  &trans   &trans
+                        &trans   &trans   &trans &trans     &trans   &trans &trans   &trans 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
