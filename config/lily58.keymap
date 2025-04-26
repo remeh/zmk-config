@@ -22,17 +22,17 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  TAB  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   =   |
-// |  CTRL |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BSPC  |
-// | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   *   |
-// |  FREE |  Z  |  X  |  C   |  V   |  B   |   ESC  |  |  "]"  |  N   |  ,    |  ;    |  :   |   !   |       |
+// |  TAB  |  &  |  é  |  "   |  '   |  (   |                   |  -   |  è    |  _    |  ç   |   à   |   =   |
+// |  CTRL |  a  |  z  |  e   |  r   |  t   |                   |  y   |  u    |  i    |  o   |   o   | BSPC  |
+// | SHIFT |  q  |  s  |  d   |  f   |  g   |                   |  h   |  j    |  k    |  l   |   ;   |   *   |
+// |  FREE |  w  |  x  |  c   |  v   |  b   |   ESC  |  |       |  n   |  ,    |  ;    |  :   |   !   |       |
 //                     | ALT  | GUI  | MO 1 |  SPACE |  | ENTER | MO 2 | MO 3  | GUI   |
             display-name = "Base";
             bindings = <
 &kp TAB   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp FR_EQL
 &kp LCTRL &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp BSPC
 &kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp FR_ASTR
-&trans    &kp Z  &kp X  &kp C    &kp V    &kp B  &kp ESC    &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &trans
+&trans    &kp Z  &kp X  &kp C    &kp V    &kp B  &kp ESC    &trans   &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &trans
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &mo 3 &kp RGUI
             >;
 
@@ -42,35 +42,35 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  -   |       |       |      |       |       |
+// |       |     |     |      |      |      |                   |  -   |       |       |      |       |       |
 // |       |     |  (  |  {   |  [   |      |                   |  #   |   ]   |   }   |  )   |       |       |
-// |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
+// |       |     |     |      |      |      |        |  |       |  <   |   >   |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Mo 1";
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp FR_MINS  &trans   &trans   &trans   &trans  &trans   &trans   &trans
-&trans     &trans           &kp FR_LPRN       &kp FR_LCBR       &kp FR_LBRC  &trans                       &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans  &trans
-&trans     &trans           &trans            &trans            &trans       &trans    &trans   &trans    &trans    &trans   &trans  &trans  &trans  &trans
-                                              &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&trans  &trans  &trans &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans &trans  &trans  &trans                      &kp FR_MINS   &trans   &trans  &trans   &trans   &trans
+&trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &trans       &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                     &kp FR_LABK &kp FR_RABK &trans  &trans   &trans  &trans  &trans  &trans
+                                              &trans               &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
+        }; 
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
+// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |   F9  |  F10 |  F11  |  F12  |
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  <-  |   v   |   ^   |  ->  |       |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+// |       |     |     |      |      |      |                   |  <-  |   v   |   ^   |  ->  |       |       |
+// |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Mo 2";
             bindings = <
+&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+&trans    &trans &trans &trans  &trans  &trans                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
+&trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &trans &trans &trans &trans &trans &trans
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 
