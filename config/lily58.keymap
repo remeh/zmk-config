@@ -25,7 +25,7 @@
 // |  TAB  |  &  |  é  |  "   |  '   |  (   |                   |  -   |  è    |  _    |  ç   |   à   |   =   |
 // |  CTRL |  a  |  z  |  e   |  r   |  t   |                   |  y   |  u    |  i    |  o   |   o   | BSPC  |
 // | SHIFT |  q  |  s  |  d   |  f   |  g   |                   |  h   |  j    |  k    |  l   |   ;   |   *   |
-// |  FREE |  w  |  x  |  c   |  v   |  b   |   ESC  |  |       |  n   |  ,    |  ;    |  :   |   !   |       |
+// |  FREE |  w  |  x  |  c   |  v   |  b   |   ESC  |  |       |  n   |  ,    |  ;    |  :   |   !   |   ù   |
 //                     | ALT  | GUI  | MO 1 |  SPACE |  | ENTER | MO 2 | MO 3  | GUI   |
             display-name = "Base";
             bindings = <
@@ -49,7 +49,7 @@
             display-name = "Mo 1";
             bindings = <
 &trans  &trans  &trans &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_AT &kp FR_DLR &kp FR_EURO  &trans  &trans           &kp FR_MINS   &kp FR_MICR  &kp FR_UNDS  &kp FR_EXLM  &kp FR_PIPE  &trans
+&trans  &kp FR_AT &kp FR_DLR &kp FR_DLR &trans &trans            &kp FR_MINS   &kp FR_MICR  &kp FR_UNDS  &kp FR_EXLM  &kp FR_PIPE  &trans
 &trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &trans       &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                     &kp FR_LABK &kp FR_RABK &kp FR_TILD  &kp FR_BSLS &trans  &trans  &trans  &trans
                                               &trans               &trans       &trans    &trans   &trans    &trans    &trans    &trans
