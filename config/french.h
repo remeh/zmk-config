@@ -157,10 +157,12 @@
 #define FR_CURR RA(FR_DLR) // ¤
 
 // remeh's addition
+// some come from: https://github.com/joelspadin/zmk-locales/blob/main/include/locale/keys_fr.h
+
 #define FR_EURO RA(E)   // €
 // #define FR_GRTR LS(NUBS) // >
 #define FR_LESS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
 #define FR_GRTR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
 #define FR_ASTR NUHS
-#define FR_TILD (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+#define FR_TILD (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
 
