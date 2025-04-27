@@ -1,4 +1,4 @@
-/*
+    /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -42,15 +42,15 @@
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |  @  | USD | EUR  |      |      |                   |  -   |  µ    |   _   |  !   |   |   |       |
+// |       |  @  | USD | EUR  |      |      |                   |  -   |  µ    |   _   |  !   |       |       |
 // |       |     |  (  |  {   |  [   |      |                   |  #   |   ]   |   }   |  )   |       |       |
 // |       |     |     |      |      |      |        |  |       |  <   |   >   |   ~   |bkslsh|       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Mo 1";
             bindings = <
 &trans  &trans  &trans &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_AT &kp FR_DLR &kp FR_EURO &trans &trans              &kp FR_MINS &kp FR_MICR &kp FR_UNDS &kp FR_EXLM &kp FR_PIPE &trans
-&trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &trans       &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans  &trans
+&trans  &kp FR_AT &kp FR_DLR &kp FR_EURO &trans &trans              &kp FR_MINS &kp FR_MICR &kp FR_UNDS &kp FR_EXLM &trans &trans
+&trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &kp FR_PIPE   &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans &trans              &kp FR_LESS &kp FR_GRTR &kp FR_LABK  &kp FR_RABK &trans  &trans  &trans
                         &trans  &trans  &trans   &trans   &trans   &trans &trans &trans
             >;
