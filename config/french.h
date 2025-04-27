@@ -154,5 +154,9 @@
 #define FR_RBRC RA(FR_RPRN) // ]
 #define FR_RCBR RA(FR_EQL)  // }
 // Row 2
-#define FR_EURO RA(KC_E)   // €
 #define FR_CURR RA(FR_DLR) // ¤
+
+// remeh's addition
+#define FR_EURO RA(E)   // €
+#define FR_LESS NUBS
+#define FR_GRTR LS(NUBS)
