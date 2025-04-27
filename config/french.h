@@ -159,6 +159,6 @@
 // remeh's addition
 #define FR_EURO RA(E)   // €
 #define FR_GRTR LS(NUBS) // >
-#define FR_LESS NUBS // >
+#define FR_LESS BSLH
 #define FR_ASTR NUHS
 
