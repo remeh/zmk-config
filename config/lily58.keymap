@@ -60,14 +60,14 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |SCLDWN|MLCLICK|MRCLICK|SCLUP |       |       |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |LCLICK|SCLDWN | SCLUP |RCLICK|       |       |
 // |       |     |     |      |      |      |                   |MLEFT | MDOWN |  MUP  |MRIGHT|       |       |
 // |       |     |     |      |      |      |                   |  <-  |   v   |   ^   |  ->  |       |       |
 // |       |     |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //                     |      |      |      |MLCLICK |  |       |      |       |       |
             display-name = "Mo 2";
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &msc SCRL_DOWN &mkp LCLK &mkp RCLK &msc SCRL_UP  &trans   &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &mkp LCLK &msc SCRL_DOWN &msc SCRL_UP &mkp RCLK &trans &trans
 &trans    &trans &trans &trans  &trans  &trans                       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &trans   &trans
 &trans    &trans &trans &trans  &trans  &trans                       &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT  &trans    &trans
 &trans    &trans &trans &trans  &trans  &trans    &trans   &trans    &trans &trans &trans &trans &trans &trans
