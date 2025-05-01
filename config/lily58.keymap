@@ -43,14 +43,14 @@
 // ------------------------------------------------------------------------------------------------------------
 // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |   F9  |  F10 |  F11  |  F12  |
 // |       |  @  | USD | EUR  |      |      |                   |  -   |  `    |   _   |  !   |       |  DEL  |
-// |       |     |  (  |  {   |  [   |      |                   |  #   |   ]   |   }   |  )   |   |   |       |
+// |       |     |  (  |  {   |  [   |  |   |                   |  #   |   ]   |   }   |  )   |       |       |
 // |       |     |     |      |      |      |        |  |       |  <   |   >   |   ~   |bkslsh|       |       |
 //                     |      |      |      |        |  |       |      |       |       |
             display-name = "Mo 1";
             bindings = <
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
 &trans  &kp FR_AT &kp FR_DLR &kp FR_EURO &trans &trans              &kp FR_MINS &kp FR_GRV &kp FR_UNDS &kp FR_EXLM &trans &kp DEL
-&trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &trans   &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &kp FR_PIPE &trans
+&trans  &trans  &kp FR_LPRN  &kp FR_LCBR &kp FR_LBRC  &kp FR_PIPE   &kp FR_HASH &kp FR_RBRC &kp FR_RCBR &kp FR_RPRN &trans &trans
 &trans  &trans  &trans  &trans  &trans  &trans &trans              &trans &kp FR_LESS &kp FR_GRTR &kp FR_TILD &kp FR_BSLS &trans  &trans
                         &trans  &trans  &trans   &trans   &trans   &trans &trans &trans
             >;
